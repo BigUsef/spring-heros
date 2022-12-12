@@ -1,0 +1,16 @@
+server:
+  error:
+    include-message: always
+spring:
+  config:
+    import: optional:secrets.yaml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
